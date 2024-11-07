@@ -11,10 +11,10 @@ on:
         required: true
       ikinci_hesap_email: 
        description: 'Second Account Email'
-       required: true
+       required: false
       ikinci_hesap_sifre:
        description: 'Second Account Password'
-       required: true
+       required: false
       taraftar_kart_tc:
        description: 'Id Number'
        required: false
