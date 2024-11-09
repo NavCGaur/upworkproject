@@ -1,0 +1,40 @@
+name: Test Workflow
+
+on:
+  workflow_dispatch:
+    inputs:
+      ilk_hesap_email:
+        description: 'First Account Email'
+        required: true
+      ilk_hesap_sifre:
+        description: 'First Account Password'
+        required: true
+      ikinci_hesap_email: 
+       description: 'Second Account Email'
+       required: false
+      ikinci_hesap_sifre:
+       description: 'Second Account Password'
+       required: false
+      taraftar_kart_tc:
+       description: 'Id Number'
+       required: false
+      username:
+        description: 'Username'
+        required: true
+      bileti_tut:
+        description: 'reserve'
+        required: true
+
+jobs:
+  test-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Log input parameters
+        run: |
+          echo "First Account Email: ${{ github.event.inputs.ilk_hesap_email }}"
+          echo "First Account Password: ${{ github.event.inputs.ilk_hesap_sifre }}"
+          echo "Second Account Email: ${{ github.event.inputs.ikinci_hesap_email }}"
+          echo "Second Account Password: ${{ github.event.inputs.ikinci_hesap_sifre }}"
+          echo "Second Account Password: ${{ github.event.inputs.taraftar_kart_tc }}"          
+          echo "Username: ${{ github.event.inputs.username }}"
+          echo "Reserve: ${{ github.event.inputs.bileti_tut }}"
