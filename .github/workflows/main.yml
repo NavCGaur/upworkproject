@@ -32,5 +32,5 @@ jobs:
           echo "First Account Password: ${{ github.event.inputs.ilk_hesap_sifre }}"
           echo "Second Account Email: ${{ github.event.inputs.ikinci_hesap_email }}"
           echo "Second Account Password: ${{ github.event.inputs.ikinci_hesap_sifre }}"
-          echo "Second Account Password: ${{ github.event.inputs.taraftar_kart_tc }}"          
+          echo "Id Number: ${{ github.event.inputs.taraftar_kart_tc }}"          
           echo "Username: ${{ github.event.inputs.username }}"
