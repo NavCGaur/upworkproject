@@ -21,6 +21,9 @@ on:
       username:
         description: 'Username'
         required: true
+      bileti_tut:
+        description: 'reserve'
+        required: true
 
 jobs:
   test-job:
@@ -34,3 +37,4 @@ jobs:
           echo "Second Account Password: ${{ github.event.inputs.ikinci_hesap_sifre }}"
           echo "Id Number: ${{ github.event.inputs.taraftar_kart_tc }}"          
           echo "Username: ${{ github.event.inputs.username }}"
+          echo "Reserve: ${{ github.event.inputs.bileti_tut }}"
