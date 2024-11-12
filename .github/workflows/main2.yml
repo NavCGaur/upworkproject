@@ -9,9 +9,16 @@ on:
       ilk_hesap_sifre:
         description: 'First Account Password'
         required: true
+      taraftar_kart_tc:
+        description: 'Id number'
+        required: false
+      matchName:
+        description: 'match name'
+        required: false
       username:
         description: 'Username'
         required: true
+      
 
 jobs:
   test-job:
@@ -20,5 +27,7 @@ jobs:
       - name: Log input parameters
         run: |
           echo "First Account Email: ${{ github.event.inputs.ilk_hesap_email }}"
-          echo "First Account Password: ${{ github.event.inputs.ilk_hesap_sifre }}"             
+          echo "First Account Password: ${{ github.event.inputs.ilk_hesap_sifre }}"   
+          echo "Id Number: ${{ github.event.inputs.taraftar_kart_tc }}"  
+          echo "Match  Name: ${{ github.event.inputs.matchName }}"   
           echo "Username: ${{ github.event.inputs.username }}"
