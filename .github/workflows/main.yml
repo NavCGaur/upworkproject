@@ -18,7 +18,7 @@ on:
       taraftar_kart_tc:
        description: 'Id Number'
        required: false
-      match_name:
+      matchName:
        description: 'Match Name'
        required: false
       username:
@@ -39,6 +39,6 @@ jobs:
           echo "Second Account Email: ${{ github.event.inputs.ikinci_hesap_email }}"
           echo "Second Account Password: ${{ github.event.inputs.ikinci_hesap_sifre }}"
           echo "Id Number: ${{ github.event.inputs.taraftar_kart_tc }}"      
-          echo "Match Name: ${{ github.event.inputs.match_name }}"
+          echo "Match Name: ${{ github.event.inputs.matchName }}"
           echo "Username: ${{ github.event.inputs.username }}"
           echo "Reserve: ${{ github.event.inputs.bileti_tut }}"
